@@ -1,0 +1,12 @@
+.my_menu .navbar-nav li a:hover{
+    background: black;
+    color: white
+    }
+    .my_menu .navbar-nav .active a, .my_menu .navbar-nav .active a:hover{
+        background: black;
+        color: white 
+    }
+    
+    .our_facilities{
+        background: radial-gradient(circle,#ffffff, #ffffff)
+    }

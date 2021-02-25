@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand">AV MobileStore</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/product-gallery">Products</a>
+      </li>
+
+      
+
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/product-cart">Cart</a>
+      </li>
+      
+    </ul>
+    <div class="my-2 my-lg-0">
+      <button (click)="onLogout()" class="btn btn-outline-success my-2 my-sm-0">Logout</button>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<div id="carouselMobile" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <a href="/mobile?name=Apple%20iPhone%20X" >
+          <img class="d-block img-fluid" src="assets/carousel/Apple_iPhone_X.jpg" alt="Apple iPhone X">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="/mobile?name=Samsung%20Galaxy%20Note8" >
+          <img class="d-block img-fluid" src="assets/carousel/Samsung_Note_8.jpg" alt="Samsung Note 8">
+        </a>
+      </div>
+      <div class="carousel-item">
+        <a href="/mobile" >
+          <img class="d-block img-fluid" src="assets/carousel/Mobiles.jpg" alt="Mobiles">
+        </a>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselMobile" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselMobile" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+     
+
+
+  

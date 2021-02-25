@@ -1,0 +1,84 @@
+<h3 class="header">Signup</h3>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="form singin">
+      <div class="form-group">
+        <label for="">First Name</label>
+        <input [(ngModel)]="firstName" type="text" class="form-control" placeholder="eg: First Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="">Last Name</label>
+        <input [(ngModel)]="lastName" type="text" class="form-control" placeholder="eg:Last Name" required>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="">Gender</label>
+        <select [(ngModel)]="gender" class="form-control">
+        <option [value]="M" >Male</option>
+        <option [value]="F" >Female</option>
+        <option [value]="O" >Other</option>
+        </select>
+      </div> 
+       -->
+       <div class="form-group">
+        <label for="">Gender</label>
+        <select [(ngModel)]="gender" class="form-control">
+        <option value="0">All</option>
+        <option [value]="gender.gender" *ngFor="let gender of genders">{{gender.viewValue}}</option>
+        </select>
+        </div> 
+      
+      <div class="form-group">
+        <label for="">Mobile</label>
+        <input [(ngModel)]="phone" type="tel" class="form-control" placeholder="eg: 9785210652" required>
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="">Role</label>
+        <select [(ngModel)]="role" class="form-control">
+        <option [value]="male" >USER</option>
+        </select>
+        </div> 
+       -->
+
+       <div class="form-group">
+        <label for="">Role</label>
+        <select [(ngModel)]="role" class="form-control">
+        <option value="0">All</option>
+        <option [value]="role.role" *ngFor="let role of roles">{{role.viewValue}}</option>
+        </select>
+        </div> 
+       <!-- <div class="form-group">
+        <label for="">Role</label>
+        <select  [(ngModel)]="role" class="form-control">
+        <option value="USER">USER</option>
+        <option [value]="role">USER</option>
+        </select>
+        </div>  -->
+      <div class="form-group">
+        <label for="">Email</label>
+        <input [(ngModel)]="email" type="email" class="form-control"placeholder="eg: abc@xyz.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="">Password</label>
+        <input [(ngModel)]="password" type="password" class="form-control" required>
+      </div>
+
+      <div class="form-group">
+        <label for="">Confirm Password</label>
+        <input [(ngModel)]="confirmPassword" type="password" class="form-control" required>
+      </div>
+    
+      <div class="form-group">
+        <button (click)="onSignup()" class="btn btn-info">Signup</button>
+        <a routerLink="/signin" class="btn btn-info float-right">Signin</a>
+        <button (click)="onCancel()" class="btn btn-danger">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>

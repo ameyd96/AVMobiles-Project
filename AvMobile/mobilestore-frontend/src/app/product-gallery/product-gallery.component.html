@@ -1,0 +1,102 @@
+<div class="container-fluid top-nav">
+
+
+  <nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand for-nav ">AV MobileStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link for-nav" routerLink="/product-gallery">Products</a>
+        </li>
+  
+       
+       
+        <li class="nav-item">
+          <a class="nav-link for-nav" routerLink="/product-cart">Cart</a>
+        </li>
+        
+      </ul>
+      <div class="my-2 my-lg-0">
+        <button (click)="onLogout()" class="btn btn-outline-success my-2 my-sm-0">Logout</button>
+      </div>
+    </div>
+  </nav>
+  
+  </div>
+  
+
+<h3 class="header">Products</h3>
+
+<div class="row">
+
+ 
+
+  <div id="mobileMainDiv">
+    <div id="filter">
+        <h3 class="a-size-medium a-spacing-base a-spacing-top-base a-color-tertiary a-text-normal">Filter by</h3>
+        <h4 class="a-size-small a-spacing-mini a-color-base a-text-bold">Operating System</h4>
+        <ul>
+            <li>
+              <input type="checkbox"   value="Android" />
+              <span class="a-size-small a-color-base s-ref-text-link s-ref-link-cursor"> Android</span>
+            </li>
+            <li>
+              <input type="checkbox"    value="IOS" />
+              <span class="a-size-small a-color-base s-ref-text-link s-ref-link-cursor"> iOS</span>
+            </li>
+        </ul>
+
+        <h4 class="a-size-small a-spacing-mini a-color-base a-text-bold">Brands</h4>
+        <ul>
+            <li>
+                <input type="checkbox" name="brand"  value="Apple" />
+                <span class="a-size-small a-color-base s-ref-text-link s-ref-link-cursor"> Apple</span>
+            </li>
+            <li>
+                <input type="checkbox" name="brand"  value="Redmi" />
+                <span class="a-size-small a-color-base s-ref-text-link s-ref-link-cursor"> Redmi</span>
+            </li>
+            <li>
+                <input type="checkbox" name="brand"  value="Samsung" />
+                <span class="a-size-small a-color-base s-ref-text-link s-ref-link-cursor"> Samsung</span>
+            </li>
+            <li>
+                <input type="checkbox" name="brand"  value="Google" />
+                <span class="a-size-small a-color-base s-ref-text-link s-ref-link-cursor"> Google</span>
+            </li>
+        </ul>
+
+       
+        </div>
+  </div>
+
+  <div class="col-md-1"></div>
+
+  <div class="col-md-8">
+      <!-- <h4 *ngIf="products.length == 0">There are no products matching this criteria</h4> -->
+      <div   class="row">
+        <div class="col-md-4 product" *ngFor="let product of products" >
+          <img src="data:image/png;base64,{{product.imageFile}}" class="card-img-top" alt="...">
+          <!-- <h5 >{{product.title}}</h5> -->
+          <h5 >{{product.proName}}</h5>
+          <div class="description"></div>
+  
+          <div class="brand"><strong>Brand: </strong> {{product.brandName}}</div>
+          <div class="category"><strong>Category: </strong> {{product.categoryName}}</div>
+          <div class="price"><strong>Price: </strong>{{product.proPrice}}</div>
+          <button (click)="onAddToCart(product)"  ><i class="fas fa-shopping-cart"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+</div>

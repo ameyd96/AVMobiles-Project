@@ -1,0 +1,53 @@
+<h2>Add Product</h2>
+
+<div class="container">
+    <div class="form-group">
+        <label for="">Title</label>
+        <input [(ngModel)]="proName" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="">Brand</label>
+        <input [(ngModel)]="brandName" type="text" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <label for="">Color</label>
+        <input [(ngModel)]="color" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Price</label>
+      <input [(ngModel)]="proPrice" type="number" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="">Quantity</label>
+    <input [(ngModel)]="proQuantity" type="number" class="form-control">
+</div>
+<div class="form-group">
+  <label for="">Category</label>
+  <input [(ngModel)]="categoryName" type="text" class="form-control">
+</div>
+<!-- <div class="form-group">
+    <label for="">Mfg Date</label>
+    <form class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <input class="form-control" placeholder="yyyy-mm-dd"
+                   name="dp" [(ngModel)]="mfDate" ngbDatepicker #d="ngbDatepicker">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div> -->
+
+    <div class="form-group">
+        <label for="">Select an image</label>
+        <input type="file" class="form-control" (change)="onImageSelected($event)" accept="image/*">
+    </div>
+
+    <div class="form-group">
+        <button (click)="onAdd()" class="btn btn-success">Save</button>
+        <button (click)="onCancel()" class="btn btn-danger" style="margin-left: 5px">Cancel</button>
+    </div>
+</div>

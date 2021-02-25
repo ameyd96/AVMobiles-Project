@@ -1,0 +1,36 @@
+#mobileMainDiv{
+    max-width: 90%;
+    padding-left: 5%;
+    display: table-row;
+  }
+  #filter {
+    float: left;
+    position: relative;
+    z-index: 2;
+    width: 200px;
+    box-sizing: border-box;
+    border-right: 1px solid #DDD;
+    padding: 6px 6px 20px 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: table-cell;
+  }
+
+  .product {
+    border: #ccc solid 2px;
+    box-shadow: 0 0 5px 1px #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-right: 3px;
+    
+    /* cursor: pointer; */
+  }
+  h5 {
+    cursor: pointer;
+  }
+  .product img {
+    height: 200px;
+    margin-bottom: 20px;
+    
+  }  

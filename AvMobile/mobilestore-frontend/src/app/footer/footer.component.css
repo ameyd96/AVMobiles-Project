@@ -1,0 +1,26 @@
+.colored-section {
+    background-color: #ff4c68;
+    color: #fff;
+  }
+  .download-button {
+    margin: 5% 3% 5% 0;
+  }
+  .container-fluid{
+      text-align: center;
+    padding: 7% 15%;
+  }
+  .white-section {
+    background-color: #fff;
+  }
+  .social-icon {
+      text-align: center;
+    margin: 20px 10px;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 600px;
+    
+  }
